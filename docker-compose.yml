@@ -26,7 +26,7 @@ services:
     depends_on:
       - db
     ports:
-      - "$API_PORT:$CONTAINER_PORT"
+      - "$API_PORT:3000"
 
   front:  
     build:
@@ -37,6 +37,6 @@ services:
     volumes:
       - "./front:/$WORKDIR"
     ports:
-      - "$FRONT_PORT:$CONTAINER_PORT"
+      - "$FRONT_PORT:3000"
     depends_on:
       - api
